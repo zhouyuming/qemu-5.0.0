@@ -107,6 +107,10 @@ config NETDUINOPLUS2
     bool
     select STM32F405_SOC
 
+config STM32F407_ST_DISCOVERY
+    bool
+    select STM32F407_SOC
+
 config NSERIES
     bool
     select OMAP
@@ -330,6 +334,18 @@ config STM32F405_SOC
     select ARM_V7M
     select STM32F4XX_SYSCFG
     select STM32F4XX_EXTI
+
+config STM32F407_SOC
+    bool
+    select ARM_V7M
+    select OR_IRQ
+    select STM32F4XX_SYSCFG
+    select STM32F4XX_EXTI
+    select STM32F4XX_USART
+    select STM32F4XX_RCC
+    select STM32F4XX_PWR
+    select STM32F4XX_TIMER
+    select STM32F4XX_GPIO
 
 config XLNX_ZYNQMP_ARM
     bool
