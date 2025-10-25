@@ -10,4 +10,5 @@ common-obj-$(CONFIG_IMX) += imx_gpio.o
 common-obj-$(CONFIG_RASPI) += bcm2835_gpio.o
 common-obj-$(CONFIG_NRF51_SOC) += nrf51_gpio.o
 common-obj-$(CONFIG_ASPEED_SOC) += aspeed_gpio.o
+common-obj-$(CONFIG_STM32F1XX_GPIO) += stm32f1xx_gpio.o
 common-obj-$(CONFIG_STM32F4XX_GPIO) += stm32f4xx_gpio.o
