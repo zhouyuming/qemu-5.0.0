@@ -45,6 +45,7 @@
 
 #define RCC_BASE_ADDR       0x40023800
 #define POWER_BASE_ADDR     0x40007000
+#define FLASH_BASE_ADDR     0x40003C00
 
 /* PortA ~ PortK */
 #define STM_NUM_GPIOS       11
