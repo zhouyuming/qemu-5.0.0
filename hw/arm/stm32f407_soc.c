@@ -53,6 +53,8 @@ static void stm32f407_soc_initfn(Object *obj)
                           TYPE_STM32F4XX_SYSCFG);
     sysbus_init_child_obj(obj, "exti", &s->exti, sizeof(s->exti),
                            TYPE_STM32F4XX_EXTI);
+    sysbus_init_child_obj(obj, "flash", &s->flash, sizeof(s->flash),
+                        TYPE_STM32F4XX_FLASH);
 
     object_initialize(&s->rcc, sizeof(s->rcc), TYPE_STM32F4XX_RCC);
     qdev_set_parent_bus(DEVICE(&s->rcc), sysbus_get_default());
