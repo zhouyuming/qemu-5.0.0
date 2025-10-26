@@ -109,6 +109,9 @@ config STM32F4XX_RCC
 config STM32F4XX_PWR
     bool
 
+config STM32F4XX_FLASH
+    bool
+
 config MIPS_ITU
     bool
 
