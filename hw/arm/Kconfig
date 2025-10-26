@@ -361,6 +361,7 @@ config STM32F407_SOC
     select STM32F4XX_PWR
     select STM32F4XX_TIMER
     select STM32F4XX_GPIO
+    select STM32F4XX_FLASH
 
 config XLNX_ZYNQMP_ARM
     bool
