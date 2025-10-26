@@ -71,12 +71,6 @@ static void stm32f407_soc_initfn(Object *obj)
         qdev_set_parent_bus(DEVICE(&s->gpio[i]), sysbus_get_default());
     }
 
-    for (i = 0; i < STM_NUM_GPIOS; i++) {
-        object_initialize(&s->gpio[i], sizeof(s->gpio[i]),
-                          TYPE_STM32F4XX_GPIO);
-        qdev_set_parent_bus(DEVICE(&s->gpio[i]), sysbus_get_default());
-    }
-
     for (i = 0; i < STM_NUM_TIMERS; i++) {
         object_initialize(&s->timer[i], sizeof(s->timer[i]), TYPE_STM32F4XX_TIMER);
         qdev_set_parent_bus(DEVICE(&s->timer[i]), sysbus_get_default());
