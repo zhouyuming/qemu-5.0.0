@@ -28,9 +28,9 @@ static void disco_init(MachineState *machine)
                            &error_fatal);
     memory_region_add_subregion(system_memory, SRAM_BASE_ADDRESS, sram);
  
-    // memory_region_init_ram(ccm, NULL, "STM32F407.ccm", CCM_SIZE,
-    //                       &error_fatal);
-    // memory_region_add_subregion(system_memory, CCM_BASE_ADDR, ccm);
+    memory_region_init_ram(ccm, NULL, "STM32F407.ccm", CCM_SIZE,
+                          &error_fatal);
+    memory_region_add_subregion(system_memory, CCM_BASE_ADDR, ccm);
  
     dev = qdev_create(NULL, TYPE_STM32F407_SOC);
  
