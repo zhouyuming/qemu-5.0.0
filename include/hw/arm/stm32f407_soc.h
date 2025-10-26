@@ -63,8 +63,8 @@
 #define FLASH_SIZE          0x100000
 #define SRAM_BASE_ADDRESS   0x20000000
 #define SRAM_SIZE 0x1000000
-#define CCM_BASE_ADDR 0x100
-#define CCM_SIZE 0x1000000
+#define CCM_BASE_ADDR 0x10000000
+#define CCM_SIZE 0x10000
  
 typedef struct STM32F407State {
     /*< private >*/
