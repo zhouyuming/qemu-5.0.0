@@ -187,6 +187,16 @@ static void stm32f407_soc_realize(DeviceState *dev_soc, Error **errp)
         sysbus_mmio_map(busdev, 0, timer_addr[i]);
         sysbus_connect_irq(busdev, 0, qdev_get_gpio_in(armv7m, timer_irq[i]));
     }
+
+    /* Flash Controller */
+    dev = DEVICE(&s->flash);
+    object_property_set_bool(OBJECT(&s->flash), true, "realized", &err);
+    if (err != NULL) {
+        error_propagate(errp, err);
+        return;
+    }
+    busdev = SYS_BUS_DEVICE(dev);
+    sysbus_mmio_map(busdev, 0, FLASH_BASE_ADDR);
 }
  
 static Property stm32f407_soc_properties[] = {
