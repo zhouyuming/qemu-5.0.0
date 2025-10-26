@@ -91,6 +91,9 @@ config STM32F1XX_FLASH
 config STM32F1XX_AFIO
     bool
 
+config STM32F1XX_EXTI
+    bool
+
 config STM32F2XX_SYSCFG
     bool
 
