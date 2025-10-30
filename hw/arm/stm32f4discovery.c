@@ -43,8 +43,14 @@ static void disco_init(MachineState *machine)
  
 static void disco_machine_init(MachineClass *mc)
 {
+    static const char * const valid_cpu_types[] = {
+        ARM_CPU_TYPE_NAME("cortex-m4"),
+        NULL
+    };
+ 
     mc->desc = "Discovery EVK Machine (STM32F407 Soc)";
     mc->init = disco_init;
+    mc->valid_cpu_types = valid_cpu_types;
 }
  
 DEFINE_MACHINE("stm32f407-st-disco", disco_machine_init)
